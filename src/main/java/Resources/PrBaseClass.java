@@ -28,7 +28,7 @@ public class PrBaseClass {
 	else if (browsername.equalsIgnoreCase("edge")) {
 		//code
 		}
-	else if (browsername.equalsIgnoreCase("Internetexplorer")) {
+	else if (browsername.equalsIgnoreCase("InternetExplorer")) {
 		//code
 		}
 	}
