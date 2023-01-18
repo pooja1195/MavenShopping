@@ -2,6 +2,7 @@ package PrShopping;
 
 import java.io.IOException;
 import java.time.Duration;
+import java.util.Arrays;
 import java.util.Iterator;
 import java.util.Set;
 import org.openqa.selenium.By;
@@ -50,11 +51,11 @@ public class PrShoppingTest extends PrBaseClass{
 		String exp = PrTestData.exp;
 		String msg = PrTestData.msg;
 		cu.softassert(cart, exp, msg);
-		
-		
 		System.out.println(PrTestData.Fmsg1);
 		
-		
+//price store		
+		Double pr4 = cu.price(ipom.spr());		
+				
 //adding another item
 		ipom.iphone().sendKeys(PrTestData.iphone);
 		ipom.search().click();
@@ -74,6 +75,14 @@ public class PrShoppingTest extends PrBaseClass{
 		cu.softassert(item2, exp2, msg2);
 		System.out.println(PrTestData.Fmsg2);
 		
+		Double ipr4 = cu.price(ipom.ipr());	
+
+//total price
+		
+		Double tpr4 = cu.price(ipom.tpr());
+		Double Sum = pr4 + ipr4;
+		String fmsg = PrTestData.fmsg;
+		cu.doubleassert(Sum, tpr4, fmsg);
 		Driver.quit();
 	}
 }

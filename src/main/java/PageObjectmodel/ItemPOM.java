@@ -16,10 +16,12 @@ public class ItemPOM{
 	private By mh = By.xpath("(//a[contains(text(),'Electronics')])[2]");
 	private By ip = By.xpath("//input[@aria-label='Search for anything']");
 	private By sr = By.xpath("//input[@value='Search']");
-	private By pr = By.xpath("(//span[contains(text(),'Apple iPhone 8 Plus - 64GB - All Colors - T-Mobile - Good Condition')])[1]");
+	private By pr = By.xpath("(//span[contains(text(),'Apple iPhone 8 - 64GB - All Colors - T-Mobile - Good Condition')])[1]");
 	private By cr = By.xpath("(//span[@class='ux-call-to-action__cell'])[4]/span");
 	private By im = By.xpath("(//span[@class='text-display-span'])[34]/span/span");
-	
+	private By spr = By.xpath("//div[@class='item-price font-title-3']/span/span/span");
+	private By ipr = By.xpath("(//div[@class='item-price font-title-3'])[1]/span/span/span");
+	private By tpr = By.xpath("//div[@data-test-id='SUBTOTAL']/span/span/span");
 	
 	public ItemPOM(WebDriver driver2) {
 		// TODO Auto-generated constructor stub
@@ -57,6 +59,15 @@ public class ItemPOM{
 	}
 	public WebElement item2() {
 		return Driver.findElement(im);
+	}
+	public WebElement spr() {
+		return Driver.findElement(spr);
+	}
+	public WebElement ipr() {
+		return Driver.findElement(ipr);
+	}
+	public WebElement tpr() {
+		return Driver.findElement(tpr);
 	}
 	
 	
