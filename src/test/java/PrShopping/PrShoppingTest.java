@@ -59,6 +59,7 @@ public class PrShoppingTest extends PrBaseClass{
 //adding another item
 		ipom.iphone().sendKeys(PrTestData.iphone);
 		ipom.search().click();
+		ipom.alert().click();
 		ipom.product().click();
 		
 		Iterator<String> it1 = cu.windowh();
